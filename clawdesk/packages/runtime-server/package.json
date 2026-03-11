@@ -1,0 +1,24 @@
+{
+  "name": "@clawdesk/runtime-server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc -p tsconfig.json",
+    "check": "tsc --noEmit -p tsconfig.json",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@clawdesk/openclaw-core": "file:../openclaw-core",
+    "@clawdesk/shared-types": "file:../shared-types",
+    "@fastify/cors": "latest",
+    "fastify": "latest",
+    "systeminformation": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "tsx": "latest",
+    "typescript": "latest"
+  }
+}

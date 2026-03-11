@@ -1,0 +1,63 @@
+{
+  "appId": "com.openlaw.clawdesk",
+  "productName": "ClawDesk",
+  "executableName": "ClawDesk",
+  "electronVersion": "40.8.0",
+  "compression": "normal",
+  "copyright": "Copyright (c) 2026 OpenLaw Project",
+  "directories": {
+    "buildResources": "build",
+    "output": "release/${version}"
+  },
+  "files": [
+    "out/**/*",
+    "package.json"
+  ],
+  "extraResources": [
+    {
+      "from": "resources/openclaw-home",
+      "to": "seed/openclaw-home"
+    }
+  ],
+  "extraMetadata": {
+    "main": "out/main/index.js"
+  },
+  "asar": true,
+  "npmRebuild": false,
+  "win": {
+    "icon": "build/icon.ico",
+    "requestedExecutionLevel": "asInvoker",
+    "legalTrademarks": "ClawDesk and OpenLaw are identifiers used for this desktop build.",
+    "signAndEditExecutable": false,
+    "target": [
+      {
+        "target": "nsis",
+        "arch": [
+          "x64"
+        ]
+      },
+      {
+        "target": "portable",
+        "arch": [
+          "x64"
+        ]
+      }
+    ],
+    "artifactName": "${productName}-${version}-${arch}.${ext}"
+  },
+  "nsis": {
+    "oneClick": false,
+    "perMachine": false,
+    "allowToChangeInstallationDirectory": true,
+    "createDesktopShortcut": "always",
+    "createStartMenuShortcut": true,
+    "shortcutName": "ClawDesk",
+    "uninstallDisplayName": "ClawDesk",
+    "installerIcon": "build/icon.ico",
+    "uninstallerIcon": "build/icon.ico",
+    "installerHeaderIcon": "build/icon.ico"
+  },
+  "portable": {
+    "artifactName": "${productName}-${version}-${arch}-portable.${ext}"
+  }
+}

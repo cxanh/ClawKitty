@@ -1,0 +1,42 @@
+{
+  "name": "clawdesk",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Desktop-first OpenClaw-based device management app.",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently -k \"npm:dev:runtime\" \"npm:dev:desktop\"",
+    "dev:mvp": "npm run dev",
+    "dev:desktop": "npm --workspace @clawdesk/desktop run dev",
+    "dev:runtime": "npm --workspace @clawdesk/runtime-server run dev",
+    "doctor": "node scripts/doctor.mjs",
+    "smoke:runtime": "node scripts/smoke-runtime.mjs",
+    "smoke:agent-safe-actions": "npx tsx scripts/smoke-agent-safe-actions.mjs",
+    "smoke:agent-file-workspaces": "npx tsx scripts/smoke-agent-file-workspaces.mjs",
+    "smoke:agent-course-schedule": "npx tsx scripts/smoke-agent-course-schedule.mjs",
+    "smoke:agent-course-schedule-import": "npx tsx scripts/smoke-agent-course-schedule-import.mjs",
+    "smoke:agent-course-reminder-deliveries": "npx tsx scripts/smoke-agent-course-reminder-deliveries.mjs",
+    "smoke:agent-reminder-plans": "npx tsx scripts/smoke-agent-reminder-plans.mjs",
+    "smoke:agent-reminder-deliveries": "npx tsx scripts/smoke-agent-reminder-deliveries.mjs",
+    "smoke:agent-study-roadmaps": "npx tsx scripts/smoke-agent-study-roadmaps.mjs",
+    "smoke:zh-intents": "npx tsx scripts/smoke-zh-intents.mjs",
+    "demo:seed": "npx tsx scripts/seed-demo-data.mjs",
+    "demo:seed:clean": "npx tsx scripts/seed-demo-data.mjs --clean",
+    "start:runtime": "npm --workspace @clawdesk/runtime-server run start",
+    "build": "npm run build:runtime && npm run build:desktop",
+    "build:desktop": "npm --workspace @clawdesk/desktop run build",
+    "build:runtime": "npm --workspace @clawdesk/runtime-server run build",
+    "package:dir": "npm run build && npm --workspace @clawdesk/desktop run package:dir:raw",
+    "package:win": "npm run build && npm --workspace @clawdesk/desktop run package:win:raw",
+    "package:dir:verify": "npm run build && npm --workspace @clawdesk/desktop run package:dir:verify",
+    "package:win:verify": "npm run build && npm --workspace @clawdesk/desktop run package:win:verify",
+    "check": "npm --workspace @clawdesk/shared-types run check && npm --workspace @clawdesk/openclaw-core run check && npm --workspace @clawdesk/runtime-server run check && npm --workspace @clawdesk/desktop run check"
+  },
+  "devDependencies": {
+    "concurrently": "latest",
+    "typescript": "latest"
+  }
+}

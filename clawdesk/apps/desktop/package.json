@@ -1,0 +1,37 @@
+{
+  "name": "@clawdesk/desktop",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Installable ClawDesk desktop shell with a managed local runtime.",
+  "author": "OpenLaw Project",
+  "type": "module",
+  "main": "out/main/index.js",
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "npm run check && electron-vite build",
+    "check": "vue-tsc --noEmit -p tsconfig.json",
+    "package:dir": "npm run build && electron-builder --config electron-builder.json --dir",
+    "package:win": "npm run build && electron-builder --config electron-builder.json --win nsis portable",
+    "package:dir:raw": "electron-builder --config electron-builder.json --dir",
+    "package:win:raw": "electron-builder --config electron-builder.json --win nsis portable",
+    "package:dir:verify": "electron-builder --config electron-builder.json --dir --config.directories.output=release/%npm_package_version%-verify",
+    "package:win:verify": "electron-builder --config electron-builder.json --win nsis portable --config.directories.output=release/%npm_package_version%-verify"
+  },
+  "dependencies": {
+    "@clawdesk/shared-types": "file:../../packages/shared-types",
+    "qrcode": "^1.5.4",
+    "vue": "latest",
+    "vue-router": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/qrcode": "^1.5.6",
+    "@vitejs/plugin-vue": "latest",
+    "electron": "40.8.0",
+    "electron-builder": "latest",
+    "electron-vite": "latest",
+    "typescript": "latest",
+    "vite": "latest",
+    "vue-tsc": "latest"
+  }
+}

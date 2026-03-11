@@ -1,0 +1,23 @@
+# Node / desktop
+clawdesk/node_modules/
+clawdesk/apps/desktop/out/
+clawdesk/apps/desktop/dist/
+clawdesk/apps/desktop/release/
+clawdesk/logs/
+clawdesk/.electron-builder-cache/
+
+# Android / Gradle
+android/ClawDeskAndroid/.gradle/
+android/ClawDeskAndroid/.codex-tools/
+android/ClawDeskAndroid/**/build/
+android/ClawDeskAndroid/local.properties
+android/ClawDeskAndroid/.idea/
+android/ClawDeskAndroid/*.hprof
+
+# General
+Thumbs.db
+Desktop.ini
+*.tmp
+
+# Local report bundle / binaries
+当前可汇报版本-2026-03-09/
