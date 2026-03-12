@@ -22,6 +22,7 @@
     "smoke:agent-reminder-plans": "npx tsx scripts/smoke-agent-reminder-plans.mjs",
     "smoke:agent-reminder-deliveries": "npx tsx scripts/smoke-agent-reminder-deliveries.mjs",
     "smoke:agent-study-roadmaps": "npx tsx scripts/smoke-agent-study-roadmaps.mjs",
+    "smoke:agent-task": "npx tsx scripts/smoke-agent-task.mjs",
     "smoke:zh-intents": "npx tsx scripts/smoke-zh-intents.mjs",
     "demo:seed": "npx tsx scripts/seed-demo-data.mjs",
     "demo:seed:clean": "npx tsx scripts/seed-demo-data.mjs --clean",

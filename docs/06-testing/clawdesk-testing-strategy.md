@@ -35,6 +35,14 @@
 - approvals
 - course schedule
 
+
+### 2.2.1 推荐冒烟命令
+
+- `npm run smoke:runtime`
+- `npm run smoke:agent-task`
+- `npm run smoke:agent-safe-actions`
+- `npm run smoke:agent-reminder-plans`
+
 ### 2.3 页面演示走查
 
 答辩前需人工走查：
