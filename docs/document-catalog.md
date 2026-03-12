@@ -47,7 +47,7 @@
   作用：定义移动端首页信息层次和重点区块。
 - [移动端配对与授权流程](C:/Users/ASUS/Desktop/openlaw/docs/01-prd/mobile-pairing-and-authorization-flow.md)  
   作用：说明移动端接入桌面端的配对与授权逻辑。
-- [OpenClaw 原型设计方案](C:/Users/ASUS/Desktop/openlaw/docs/01-prd/openclaw-device-app-design.md)  
+- [OpenClaw 原型设计方案](C:/Users/ASUS/Desktop/openlaw/docs/01-prd/openlaw-device-app-design.md)  
   作用：保留项目从 OpenClaw 原型出发的初始设计背景。
 - [权限管理与审批体系 PRD](C:/Users/ASUS/Desktop/openlaw/docs/01-prd/permissions-and-approval-prd.md)  
   作用：定义权限管理、风险分级和审批体系。
